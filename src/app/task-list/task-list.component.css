@@ -1,0 +1,186 @@
+.header{
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+
+}
+
+.header h1{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.todoapp{ 
+    background-color: #6D9886;
+    height: 100vh;
+}
+
+/* .main{
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 5px;
+    height :100vh;
+    background-color: beige;
+} */
+
+.main mat-card{
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+.main mat-card-title{
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.editBtn{
+  background: #41aa47;
+  border-radius: 999px;
+  box-shadow: #5df069 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 30px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+
+.deleteBtn{
+    background: #aa4141;
+    border-radius: 999px;
+    box-shadow: #f0715d 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 30px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+    margin-left: 10px;
+}
+.updatesection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 5vh;
+}
+.updateCard{
+
+    background: rgba( 255, 255, 255, 0.5 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    height:100px;
+    width:50%;
+
+}
+.updateCard input{
+    margin: 5px;
+    border-radius: 5px;
+    width: 20%;
+    height: 50%;
+    border: black;
+    outline: none;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+.updateCard button{
+    background: #41aa47;
+  border-radius: 10px;
+  box-shadow: #5df069 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height:2px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 20px 30px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+.x-icon{
+    position: absolute;
+    overflow: hidden;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+  }
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height:250px;
+    text-align: center;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.footer form{
+    margin-bottom: 10px;
+}
+.footer mat-form-field{
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+
+    margin-top: 10px;
+}
+
+.footer button{
+    cursor: pointer;
+    font-weight: 400;
+    padding: 10px;
+    background: rgba( 255, 255, 255, 0.4 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 16px );
+    -webkit-backdrop-filter: blur( 16px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+

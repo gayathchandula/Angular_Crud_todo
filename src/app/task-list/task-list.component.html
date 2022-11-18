@@ -1,0 +1,46 @@
+<section class="todoapp">
+
+    <header class="header">
+        <h1>Todo</h1>
+    </header>
+
+    <!-- This section should be hidden by default and shown when there are todos -->
+    <section class="main">
+        <mat-card *ngFor="let todo of todos" [ngClass]="{editing: editing}">
+            <mat-card-header>
+                <mat-card-title (dblclick)="editing = true">{{todo.title}}</mat-card-title>
+                <mat-card-subtitle>{{todo.description}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-actions align="end">
+                <button class="editBtn" mat-button (click)="updatePopup(todo.title,todo.description,todo._id)">Edit</button>
+                <button class="deleteBtn" mat-button (click)="delete(todo._id)">Delete</button>
+            </mat-card-actions>
+        </mat-card>
+        
+
+    </section>
+    <section class="updatesection" >
+        <div class="updateCard" *ngIf="editing">
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="close" class="x-icon" (click)="closePopup()"></mat-icon>
+            <input matInput placeholder="Task Name" id="title"  required name="title" [(ngModel)]="updateTask.title" >
+            <input matInput placeholder="Task Name" id="description"  required name="description"
+            [(ngModel)]="updateTask.description" >
+            <button class="editBtn" mat-button (click)="updateOne()">Update</button>
+        </div>
+    </section>
+    <footer class="footer">
+        <form (ngSubmit)="submitForm()">
+            <mat-form-field appearance="outline">
+                <mat-label>Task Name</mat-label>
+                <input matInput placeholder="Task Name" id="title" required [(ngModel)]="Task.title" name="title">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Description</mat-label>
+                <textarea matInput placeholder="Description" id="description" required [(ngModel)]="Task.description"
+                    name="description"></textarea>
+            </mat-form-field>
+            <button type="submit">Let's do!</button>
+        </form>
+
+    </footer>
+</section>
