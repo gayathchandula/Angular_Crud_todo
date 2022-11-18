@@ -11,6 +11,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 
 import { TaskListComponent } from './task-list/task-list.component';
 
@@ -24,6 +26,7 @@ import { TaskListComponent } from './task-list/task-list.component';
     MatCardModule,
     MatFormFieldModule,
     MatIconModule,
+    MatGridListModule,
     MatInputModule,
     RouterModule.forRoot([{ path: '', component: TaskListComponent }]),
   ],
