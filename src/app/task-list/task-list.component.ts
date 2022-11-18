@@ -9,13 +9,18 @@ import { TaskListService } from './task-list.service';
   providers: [TaskListService],
 })
 export class TaskListComponent implements OnInit {
+  
   todos: any;
+
   editing: boolean = false;
+
   _id: '' | undefined;
+
   Task = {
     title: '',
     description: '',
   };
+
   updateTask = {
     title: '',
     description: '',
@@ -23,6 +28,7 @@ export class TaskListComponent implements OnInit {
 
   constructor(private todoService: TaskListService) {}
 
+  /** Display popup on edit btn click */
   updatePopup(title: string, description: string, _id: any) {
     this.updateTask.title = title;
     this.updateTask.description = description;
@@ -30,15 +36,19 @@ export class TaskListComponent implements OnInit {
     this.editing = true;
   }
 
+  /** Close the popup */
   closePopup() {
     this.editing = false;
   }
+
+  /** Get all the task from service */
   getTodos() {
     return this.todoService.get().subscribe((todo) => {
       this.todos = todo;
     });
   }
 
+  /** Submit form data and create new task */
   submitForm() {
     this.todoService.create(this.Task).subscribe({
       next: (response) => {
@@ -53,6 +63,7 @@ export class TaskListComponent implements OnInit {
     });
   }
 
+  /** Task update */
   updateOne() {
     this.todoService.update(this.updateTask, this._id).subscribe({
       next: (response) => {
@@ -63,6 +74,7 @@ export class TaskListComponent implements OnInit {
     });
   }
 
+  /** Task delete */
   delete(_id: any) {
     this.todoService.delete(_id).subscribe({
       next: (response) => {

@@ -2,12 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const TODOS = [
-  { title: 'Install Angular CLI', dectription: 'true' },
-  { title: 'Style app', dectription: 'true' },
-  { title: 'Finish service functionality', dectription: 'false' },
-  { title: 'Setup API', dectription: 'false' },
-];
 
 @Injectable({
   providedIn: 'root',
@@ -17,19 +11,20 @@ export class TaskListService {
 
   constructor(private httpClient: HttpClient) {}
 
+  /** GET: Get all tasks */
   get() {
     return this.httpClient.get(this.api);
   }
 
-  /** POST: add a new hero to the database */
+  /** POST: Create a new task */
   create(task: object): Observable<object> {
     return this.httpClient.post(this.api, task);
   }
-
+  /** PUT: Update a existing task */
   update(task: object,_id: any): Observable<object> {
     return this.httpClient.put(`${this.api}/${_id}`, task);
   }
-
+  /** DELETE: Delete a Specific task */
   delete(_id: any){
     return this.httpClient.delete(`${this.api}/${_id}`);
   }
