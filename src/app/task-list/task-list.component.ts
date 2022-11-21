@@ -9,7 +9,7 @@ import { TaskListService } from './task-list.service';
   providers: [TaskListService],
 })
 export class TaskListComponent implements OnInit {
-  
+
   todos: any;
 
   editing: boolean = false;
@@ -26,7 +26,7 @@ export class TaskListComponent implements OnInit {
     description: '',
   };
 
-  constructor(private todoService: TaskListService) {}
+  constructor(private todoService: TaskListService) { }
 
   /** Display popup on edit btn click */
   updatePopup(title: string, description: string, _id: any) {

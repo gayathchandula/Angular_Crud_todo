@@ -1,0 +1,22 @@
+<div class="body">
+    <h2>Login</h2>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" formControlName="username" required id="username" name="username"
+                [(ngModel)]="user.username" />
+            <small *ngIf="username?.invalid && username?.touched" class="validateMsg">*Name is Required</small>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" formControlName="password" class="form-control" required id="password"
+                name="password" [(ngModel)]="user.password" />
+
+            <small *ngIf="password?.invalid && password?.touched" class="validateMsg">*Password is Required</small>
+        </div>
+        <div class="form-group btn">
+            <button type="'submit" [disabled]="loading" [disabled]="loginForm.invalid">Login</button>
+        </div>
+    </form>
+</div>
