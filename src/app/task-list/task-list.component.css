@@ -1,15 +1,15 @@
-.header{
+.header {
     padding: 10px;
     margin-bottom: 10px;
-    background: rgba( 255, 255, 255, 0.3 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 20px );
-    -webkit-backdrop-filter: blur( 20px );
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 
 }
 
-.header h1{
+.header h1 {
     text-align: center;
     font-size: 30px;
     font-weight: bold;
@@ -17,70 +17,77 @@
 
 }
 
-.todoapp{ 
+.todoapp {
     background-color: #6D9886;
     height: 100vh;
 }
 
-.main{
+.main {
     position: relative;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.main mat-card{
+.main mat-card {
     width: 350px;
     padding: 0 !important;
     padding-bottom: 3% !important;
     margin-left: 10px;
     margin-bottom: 10px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(179, 177, 177, 0.596);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
 
 }
 
-.main mat-card-title{
-    text-align: center;
+.main mat-card-title {
+    text-align: left;
     font-size: 30px;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
 }
-.main mat-card-subtitle{
+
+.main mat-card-subtitle {
     font-size: 15px;
-    text-align: center;
+    text-align: left;
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
 }
 
-.editBtn{
-  background: #41aa47;
-  border-radius: 999px;
-  box-shadow: #5df069 0 10px 20px -10px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-  opacity: 1;
-  outline: 0 solid transparent;
-  padding: 8px 30px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: fit-content;
-  word-break: break-word;
-  border: 0;
+.editBtn {
+    background: #41aa47;
+    border-radius: 999px;
+    box-shadow: #5df069 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 30px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
 }
 
-.deleteBtn{
+.deleteBtn {
     background: #aa4141;
     border-radius: 999px;
     box-shadow: #f0715d 0 10px 20px -10px;
     box-sizing: border-box;
     color: #FFFFFF;
     cursor: pointer;
-    font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+    font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
@@ -95,25 +102,28 @@
     border: 0;
     margin-left: 10px;
 }
-.updatesection{
 
-  position:fixed; 
-  top: calc(50% - 40px);
-  left: calc(50% - 300px); 
+.updatesection {
+
+    position: fixed;
+    top: calc(50% - 40px);
+    left: calc(50% - 300px);
 }
-.updateCard{
 
-    background: rgba( 255, 255, 255, 0.5 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 3px );
-    -webkit-backdrop-filter: blur( 3px );
+.updateCard {
+
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    height:80px;
-    width:600px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    height: 80px;
+    width: 600px;
 
 }
-.updateCard input{
+
+.updateCard input {
     margin: 5px;
     border-radius: 5px;
     width: 20%;
@@ -124,54 +134,57 @@
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
 }
-.updateCard button{
+
+.updateCard button {
     background: #41aa47;
-  border-radius: 10px;
-  box-shadow: #5df069 0 10px 20px -10px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  line-height:2px;
-  opacity: 1;
-  outline: 0 solid transparent;
-  padding: 20px 30px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: fit-content;
-  word-break: break-word;
-  border: 0;
+    border-radius: 10px;
+    box-shadow: #5df069 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 2px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 20px 30px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
 }
-.x-icon{
+
+.x-icon {
     position: absolute;
     overflow: hidden;
     top: 5px;
     right: 5px;
     cursor: pointer;
-  }
+}
 
-.footer{
+.footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    height:250px;
+    height: 250px;
     text-align: center;
-    background: rgba( 255, 255, 255, 0.15 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 8px );
-    -webkit-backdrop-filter: blur( 8px );
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.footer form{
+.footer form {
     margin-bottom: 10px;
 }
-.footer mat-form-field{
+
+.footer mat-form-field {
     display: flex;
     width: 50%;
     margin: 0 auto;
@@ -179,15 +192,14 @@
     margin-top: 10px;
 }
 
-.footer button{
+.footer button {
     cursor: pointer;
     font-weight: 400;
     padding: 10px;
-    background: rgba( 255, 255, 255, 0.4 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 16px );
-    -webkit-backdrop-filter: blur( 16px );
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
-
