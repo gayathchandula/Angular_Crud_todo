@@ -7,7 +7,7 @@
 
     <!-- Task cards section -->
     <section class="main">
-        <div *ngFor="let todo of todos">
+        <div *ngFor="let todo of todos ">
             <mat-card [ngClass]="{editing: editing}">
                 <mat-card-header>
                     <mat-card-title (dblclick)="editing = true">{{todo.title}}</mat-card-title>

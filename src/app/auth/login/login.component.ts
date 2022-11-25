@@ -3,6 +3,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 import { LoginService } from './login.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { throwError } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -25,6 +27,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,
     private route: ActivatedRoute,
+    public snackBar: MatSnackBar,
     private router: Router,
     private loginService: LoginService) { }
 
@@ -55,9 +58,33 @@ export class LoginComponent implements OnInit {
           this.router.navigate([this.returnUrl]);
         },
         error => {
-          console.log(error);
+          this.handleError(error);
           this.loading = false;
         });
+  }
+
+  handleError(error: any) {
+    let errorMessage = '';
+    if (error.error instanceof ErrorEvent) {
+      // client-side error
+      errorMessage = `Error: ${error.error.message}`;
+      this.snackBar.open(errorMessage, '',
+        {
+          duration: 2000,
+          panelClass: ['warning']
+        });
+    } else {
+      // server-side error
+      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+      this.snackBar.open(errorMessage, '',
+        {
+          duration: 2000,
+          panelClass: ['warning']
+        });
+    }
+    return throwError(() => {
+      return errorMessage;
+    });
   }
 
 }

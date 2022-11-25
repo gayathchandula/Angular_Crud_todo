@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { catchError, map } from 'rxjs/operators';
+import { Observable, throwError } from 'rxjs';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
   providedIn: 'root'
@@ -19,11 +21,15 @@ export class LoginService {
         }
 
         return user;
-      }));
+      })
+      );
   }
 
   verify() {
-    var user = JSON.parse(localStorage.getItem("currentUser")as any);
-     return user;
+    var user = JSON.parse(localStorage.getItem("currentUser") as any);
+    return user;
   }
+
+
+
 }

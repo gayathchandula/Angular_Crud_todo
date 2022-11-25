@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
-import { TaskListService } from './task-list.service';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { TaskListService } from '../service/task-list.service';
 
 @Component({
   selector: 'app-task-list',
@@ -10,7 +10,7 @@ import { TaskListService } from './task-list.service';
 })
 export class TaskListComponent implements OnInit {
 
-  todos: any;
+  todos:any;
 
   editing: boolean = false;
 
@@ -52,12 +52,10 @@ export class TaskListComponent implements OnInit {
   submitForm() {
     this.todoService.create(this.Task).subscribe({
       next: (response) => {
-        console.log(response);
         this.Task = {
           title: '',
           description: '',
         };
-        window.location.reload();
       },
       error: (error) => console.log(error),
     });
@@ -68,7 +66,6 @@ export class TaskListComponent implements OnInit {
     this.todoService.update(this.updateTask, this._id).subscribe({
       next: (response) => {
         console.log(response);
-        window.location.reload();
       },
       error: (error) => console.log(error),
     });
@@ -79,13 +76,16 @@ export class TaskListComponent implements OnInit {
     this.todoService.delete(_id).subscribe({
       next: (response) => {
         console.log(response);
-        window.location.reload();
       },
       error: (error) => console.log(error),
     });
   }
 
+
   ngOnInit() {
     this.getTodos();
+    this.todoService.refreshTodo.subscribe(res=>{
+      this.getTodos(); 
+    });
   }
 }

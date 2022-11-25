@@ -20,7 +20,7 @@ export class VerifyService {
       if (verify) {
         resolve(true);
       } else {
-        this.router.navigate(['/login'])
+        this.router.navigate(['/auth/login'])
         resolve(false);
       }
       //end of verify
